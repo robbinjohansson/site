@@ -12,7 +12,7 @@ https://prismjs.com/download.html#themes=prism-okaidia&languages=markup+css+clik
  * Custom inline code
  */
 :not(pre) > code {
-    @apply .font-mono .text-gray-800 .font-bold .bg-gray-200;
+    @apply font-mono text-gray-800 font-bold bg-gray-200;
     font-size: 1em;
     padding: .1em;
     white-space: normal;
@@ -20,7 +20,7 @@ https://prismjs.com/download.html#themes=prism-okaidia&languages=markup+css+clik
 
 code[class*="language-"],
 pre[class*="language-"] {
-    @apply .font-mono .text-gray-100 .font-bold;
+    @apply font-mono text-gray-100 font-bold;
     background: none;
     text-shadow: 0 1px rgba(0, 0, 0, 0.3);
     font-size: 1em;
@@ -49,7 +49,7 @@ pre[class*="language-"] {
 
 :not(pre) > code[class*="language-"],
 pre[class*="language-"] {
-    @apply .bg-gray-900;
+    @apply bg-gray-900;
 }
 
 /* Inline code */
@@ -92,7 +92,7 @@ pre[class*="language-"] {
 .token.char,
 .token.builtin,
 .token.inserted {
-    @apply .text-green-400;
+    @apply text-green-400;
 }
 
 .token.operator,
@@ -108,7 +108,7 @@ pre[class*="language-"] {
 .token.attr-value,
 .token.function,
 .token.class-name {
-    @apply .text-yellow-300;
+    @apply text-yellow-300;
 }
 
 .token.keyword {
