@@ -6,7 +6,7 @@
       <nav class="nav">
         <g-link to="/">Posts</g-link>
         <g-link to="/about/">About</g-link>
-        <g-link to="/archive/">Archive</g-link>
+        <!-- <g-link to="/archive/">Archive</g-link> -->
         <a
           href="https://github.com/robbinworks"
           target="_blank"

@@ -40,12 +40,12 @@
 
     </div>
 
-    <g-link
+    <!-- <g-link
       class="inline-block mt-5"
       to="/archive/"
     >
       Older posts &rarr;
-    </g-link>
+    </g-link> -->
 
   </div>
 </template>
@@ -53,7 +53,7 @@
 <script>
 export default {
   metaInfo: {
-    title: 'Home'
+    title: 'Posts'
   }
 }
 </script>
