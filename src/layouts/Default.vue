@@ -6,6 +6,13 @@
       <nav class="nav">
         <g-link to="/">Home</g-link>
         <g-link to="/about/">About</g-link>
+        <a
+          href="https://github.com/robbinworks"
+          target="_blank"
+          rel="nofollow noopener noreferrer"
+        >
+          GitHub
+        </a>
       </nav>
     </header>
 
@@ -223,11 +230,11 @@
         @apply .mr-5;
 
         @screen md {
-          @apply .mr-8;
+          @apply .mr-6;
         }
       }
 
-      &:hover, &.active {
+      &:hover, &.active--exact.active {
         @apply .bg-transparent .text-black;
       }
     }
