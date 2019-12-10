@@ -1,12 +1,15 @@
 <template>
     <div>
-      <h1 class="tag-title text-center space-bottom">
-        # {{ $page.tag.title }}
-      </h1>
-    <div v-for="edge in $page.tag.belongsTo.edges" :key="edge.node.id">
-      <g-link :to="edge.node.path">{{ edge.node.title }}</g-link>
-      {{ edge.node.date }}
-    </div>
+      <h1 class="mb-3"># {{ $page.tag.title }}</h1>
+
+      <div
+        v-for="edge in $page.tag.belongsTo.edges"
+        :key="edge.node.id"
+        class="mb-2"
+      >
+        <g-link :to="edge.node.id">{{ edge.node.title }}</g-link><span class="text-sm text-gray-600 ml-2">{{ edge.node.date }}</span>
+      </div>
+
   </div>
 </template>
 
