@@ -310,6 +310,10 @@
       }
     }
 
+    & ul {
+      @apply .list-disc .list-inside .mb-10;
+    }
+
     & hr {
       @apply .w-full .h-px .my-16;
     }
