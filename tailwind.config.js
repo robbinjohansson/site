@@ -1,6 +1,13 @@
 module.exports = {
   theme: {
-    extend: {},
+    extend: {
+      maxWidth: {
+        'none': 'none',
+      },
+      boxShadow: {
+        'link': 'inset 0 -3px 0 0 rgba(0, 179, 154, 0.4)',
+      },
+    },
     fontFamily: {
       sans: [
         'Inter',

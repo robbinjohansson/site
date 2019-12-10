@@ -6,18 +6,18 @@
       class="border-b mb-16 pb-16"
     >
 
-      <h1>
+      <h2>
         <g-link :to="edge.node.path">{{ edge.node.title }}</g-link>
-      </h1>
+      </h2>
 
-      <div class="text-sm text-gray-600 mt-1 mb-8">
+      <div class="text-sm text-gray-600 mt-1 mb-6">
         <span>{{ edge.node.date }} | {{ edge.node.timeToRead }} min read</span>
       </div>
 
       <div v-html="edge.node.intro"></div>
 
       <g-link
-        class="inline-block mt-5 text-blue-600"
+        class="inline-block mt-5"
         :to="edge.node.path"
       >
         Read more &rarr;
@@ -39,6 +39,14 @@
       </div> -->
 
     </div>
+
+    <g-link
+      class="inline-block mt-5"
+      to="/posts/archive/"
+    >
+      Older posts &rarr;
+    </g-link>
+
   </div>
 </template>
 
@@ -52,7 +60,7 @@ export default {
 
 <page-query>
   query {
-    posts: allPost(sortBy: "date", order: DESC, filter: { published: { eq: true }}) {
+    posts: allPost(sortBy: "date", order: DESC, limit: 3, filter: { published: { eq: true }}) {
       edges {
         node {
           id

@@ -1,12 +1,31 @@
-<template>
-    <div class="mt-5">
-      <h1 class="text-lg font-bold mb-2">{{ $page.post.title }}</h1>
-      <g-link class="text-sm font-bold text-blue-500" v-for="tag in $page.post.tags" :key="tag.id" :to="tag.path">
-        #{{ tag.title }}
-      </g-link>
-      <p class="italic mb-5 pb-5 border-b">{{ $page.post.intro }}</p>
 
-      <div v-html="$page.post.content"></div>
+<template>
+    <div>
+
+      <h1 class="mb-1" v-html="$page.post.title"></h1>
+
+      <!-- <g-link class="text-sm font-bold text-blue-500" v-for="tag in $page.post.tags" :key="tag.id" :to="tag.path">
+        #{{ tag.title }}
+      </g-link> -->
+
+      <div class="text-sm text-gray-600 mt-1 mb-6">
+        <span>{{ $page.post.date }} | {{ $page.post.timeToRead }} min read</span>
+      </div>
+
+      <div class="markdown pb-16 mb-16 border-b">
+        <!-- <div class="pb-16 mb-16 border-b">
+          <div v-if="$page.post.intro" v-html="$page.post.intro"></div>
+          <g-image style="margin-bottom: 0;" v-if="$page.post.featured_image" :src="$page.post.featured_image" :alt="$page.post.title" />
+        </div> -->
+        <g-image v-if="$page.post.featured_image" :src="$page.post.featured_image" :alt="$page.post.title" />
+
+        <div v-html="$page.post.content"></div>
+      </div>
+
+      <div class="">
+        <h2>Similar posts</h2>
+        ...
+      </div>
     </div>
 </template>
 
@@ -40,6 +59,7 @@ query Post ($id: ID!) {
     }
     intro
     content
+    featured_image (width: 1600, height: 720)
   }
 }
 </page-query>

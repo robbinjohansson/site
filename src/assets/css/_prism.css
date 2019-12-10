@@ -19,7 +19,7 @@ https://prismjs.com/download.html#themes=prism-okaidia&languages=markup+css+clik
 
 code[class*="language-"],
 pre[class*="language-"] {
-    @apply font-mono text-gray-100 font-bold text-xl;
+    @apply font-mono text-gray-100 font-bold text-xl shadow-xl;
     background: none;
     text-shadow: 0 1px rgba(0, 0, 0, 0.3);
     text-align: left;
