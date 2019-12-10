@@ -19,12 +19,12 @@ export default {
 
 <page-query>
   query {
-    posts: allPost(filter: { published: { eq: true }}) {
+    posts: allPost(sortBy: "date", order: DESC, filter: { published: { eq: true }}) {
       edges {
         node {
           id
           title
-          date (format: "D. MMMM YYYY")
+          date (format: "DD MMM, YYYY")
           timeToRead
           description
           path
