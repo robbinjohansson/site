@@ -17,7 +17,7 @@
 
         <div v-html="$page.post.content"></div>
 
-        <p class="mt-12 italic text-base">~ Robbin</p>
+        <span>👨🏻‍💻</span><p class="inline-block mt-12 italic text-base">~ Robbin</p>
       </div>
 
       <div class="">

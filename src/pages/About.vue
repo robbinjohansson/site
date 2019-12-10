@@ -14,9 +14,9 @@
 
       <p><a href="https://twitter.com/robbinworks" target="_blank" rel="nofollow noopener noreferrer">I'm on twitter</a>, however – I rarely tweet so I wouldn't recommend a follow. Also, feel free to email me at <a href="mailto:mail@robbin.works">mail@robbin.works.</a></p>
 
-      <p>~ Robbin</a></p>
-
     </div>
+
+    <span>👨🏻‍💻</span><p class="inline-block mt-12 italic text-base">~ Robbin</p>
   </div>
 </template>
 

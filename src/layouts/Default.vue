@@ -302,7 +302,7 @@
         margin-left: -10%;
         margin-right: -10%;
         width: 120%;
-        @apply .bg-gray-200 .px-8 .py-6 .my-16 .text-xl;
+        @apply .bg-gray-200 .px-8 .py-6 .text-xl;
       }
 
       & a {
