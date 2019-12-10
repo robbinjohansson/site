@@ -4,7 +4,7 @@
       <g-link class="text-sm font-bold text-blue-500" v-for="tag in $page.post.tags" :key="tag.id" :to="tag.path">
         #{{ tag.title }}
       </g-link>
-      <p class="italic mb-5 pb-5 border-b">{{ $page.post.description }}</p>
+      <p class="italic mb-5 pb-5 border-b">{{ $page.post.intro }}</p>
 
       <div v-html="$page.post.content"></div>
     </div>
@@ -18,7 +18,7 @@ export default {
       meta: [
         {
           name: 'description',
-          content: this.$page.post.description
+          content: this.$page.post.intro
         }
       ]
     }
@@ -38,7 +38,7 @@ query Post ($id: ID!) {
       title
       path
     }
-    description
+    intro
     content
   }
 }

@@ -9,7 +9,9 @@
         <g-link class="" to="/about/">About</g-link>
       </nav>
     </header>
-    <slot/>
+    <div class="w-full md:w-1/2 mx-auto">
+      <slot/>
+    </div>
   </div>
 </template>
 
@@ -182,6 +184,9 @@
     src: url("../assets/fonts/Inter-BlackItalic.woff2?v=3.11") format("woff2"),
          url("../assets/fonts/Inter-BlackItalic.woff?v=3.11") format("woff");
   }
+
+  h1,h2,h3,h4,h5,h6 { @apply font-extrabold tracking-tight text-black; }
+  h1 { @apply text-3xl; }
 </style>
 
 <static-query>

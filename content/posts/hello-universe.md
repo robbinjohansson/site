@@ -1,7 +1,7 @@
 ---
 published: true
 title: 'Hello, Universe!'
-description: 'This is the post description'
+intro: 'This is the post intro'
 date: '2019-12-05'
 tags: ['markdown']
 ---

@@ -1,9 +1,9 @@
 ---
 published: true
 title: 'Hello, World!'
-description: 'This is the post description'
+intro: Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nihil praesentium explicabo, ratione dolorem, illo similique. Non, vero consectetur quam eos harum recusandae? Ut veritatis mollitia quam omnis sint placeat eos!
 date: '2019-12-10'
-tags: ['markdown']
+tags: ['markdown', 'random']
 ---
 ## This is a sub-heading
 
