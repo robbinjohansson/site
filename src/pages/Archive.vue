@@ -1,27 +1,14 @@
 <template>
   <div>
+    <h1 class="mb-3">Archive</h1>
+
     <div
       v-for="edge in $page.posts.edges"
       :key="edge.node.id"
-      class="border-b mb-8 pb-8"
+      class="mb-2"
     >
 
-      <h3>
-        <g-link :to="edge.node.path">{{ edge.node.title }}</g-link>
-      </h3>
-
-      <div class="text-sm text-gray-600 mt-1 mb-4">
-        <span>{{ edge.node.date }} | {{ edge.node.timeToRead }} min read</span>
-      </div>
-
-      <div class="text-base" v-html="edge.node.intro"></div>
-
-      <g-link
-        class="inline-block mt-4 text-sm"
-        :to="edge.node.path"
-      >
-        Read more &rarr;
-      </g-link>
+      <g-link :to="edge.node.path">{{ edge.node.title }}</g-link><span class="text-sm text-gray-600 ml-2">{{ edge.node.date }}</span>
 
     </div>
 
@@ -46,7 +33,7 @@ export default {
 
 <page-query>
   query ($page: Int) {
-    posts: allPost(sortBy: "date", order: DESC, filter: { published: { eq: true }}, perPage: 5, page: $page) @paginate {
+    posts: allPost(sortBy: "date", order: DESC, filter: { published: { eq: true }}, perPage: 10, page: $page) @paginate {
       pageInfo {
         totalPages
         currentPage
