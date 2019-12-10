@@ -15,6 +15,22 @@
 
 <style>
   @font-face {
+    font-family: 'Inconsolata';
+    font-style:  normal;
+    font-weight: 400;
+    font-display: swap;
+    src: url("../assets/fonts/Inconsolata-Regular.ttf") format("ttf");
+  }
+
+  @font-face {
+    font-family: 'Inconsolata';
+    font-style:  normal;
+    font-weight: 700;
+    font-display: swap;
+    src: url("../assets/fonts/Inconsolata-Bold.ttf") format("ttf");
+  }
+
+  @font-face {
     font-family: 'Inter';
     font-style:  normal;
     font-weight: 100;

@@ -12,18 +12,16 @@ https://prismjs.com/download.html#themes=prism-okaidia&languages=markup+css+clik
  * Custom inline code
  */
 :not(pre) > code {
-    @apply font-mono text-gray-800 font-bold bg-gray-200;
-    font-size: 1em;
+    @apply font-mono text-gray-800 font-bold bg-gray-200 text-xl;
     padding: .1em;
     white-space: normal;
 }
 
 code[class*="language-"],
 pre[class*="language-"] {
-    @apply font-mono text-gray-100 font-bold;
+    @apply font-mono text-gray-100 font-bold text-xl;
     background: none;
     text-shadow: 0 1px rgba(0, 0, 0, 0.3);
-    font-size: 1em;
     text-align: left;
     white-space: pre;
     word-spacing: normal;
@@ -43,7 +41,7 @@ pre[class*="language-"] {
 
 /* Code blocks */
 pre[class*="language-"] {
-    padding: 1em;
+    padding: .8em;
     overflow: auto;
 }
 
