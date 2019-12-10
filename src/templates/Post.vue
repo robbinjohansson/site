@@ -13,13 +13,11 @@
       </div>
 
       <div class="markdown pb-16 mb-16 border-b">
-        <!-- <div class="pb-16 mb-16 border-b">
-          <div v-if="$page.post.intro" v-html="$page.post.intro"></div>
-          <g-image style="margin-bottom: 0;" v-if="$page.post.featured_image" :src="$page.post.featured_image" :alt="$page.post.title" />
-        </div> -->
         <g-image v-if="$page.post.featured_image" :src="$page.post.featured_image" :alt="$page.post.title" />
 
         <div v-html="$page.post.content"></div>
+
+        <p class="mt-12 italic text-base">~ Robbin</p>
       </div>
 
       <div class="">

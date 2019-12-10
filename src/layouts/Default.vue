@@ -1,16 +1,18 @@
 <template>
-  <div class="container">
-    <header class="">
-      <strong>
-        <g-link to="/">{{ $static.metadata.siteName }}</g-link>
-      </strong>
-      <nav class="">
-        <g-link class="" to="/">Home</g-link>
-        <g-link class="" to="/about/">About</g-link>
+  <div>
+    <header class="bg-white border-b h-16 flex items-center px-5 md:px-10">
+      <g-link to="/" class="font-extrabold leading-none shadow-none hover:bg-transparent">{{ $static.metadata.siteName }}</g-link>
+
+      <nav class="nav">
+        <g-link to="/">Home</g-link>
+        <g-link to="/about/">About</g-link>
       </nav>
     </header>
-    <div class="w-full md:w-1/2 mx-auto pt-12 pb-56">
-      <slot/>
+
+    <div class="container">
+      <div class="w-full md:w-1/2 mx-auto pt-10 pb-32 md:pt-16 md:pb-56">
+        <slot/>
+      </div>
     </div>
   </div>
 </template>
@@ -185,6 +187,10 @@
          url("../assets/fonts/Inter-BlackItalic.woff?v=3.11") format("woff");
   }
 
+  ::selection {
+    background-color: rgba(0, 179, 154, 0.4);
+  }
+
   h1,h2,h3,h4,h5,h6 {
     @apply .font-extrabold .tracking-tight .text-black;
 
@@ -206,6 +212,26 @@
   h4 { @apply .text-xl; }
   h5 { @apply .text-lg; }
   h6 { @apply .text-base; }
+
+  .nav {
+    @apply .ml-auto;
+
+    & a {
+      @apply .text-sm .text-gray-600 .font-normal .shadow-none .font-medium;
+
+      &:not(:last-child) {
+        @apply .mr-5;
+
+        @screen md {
+          @apply .mr-8;
+        }
+      }
+
+      &:hover, &.active {
+        @apply .bg-transparent .text-black;
+      }
+    }
+  }
 
   a {
     @apply .text-black .font-bold .shadow-link .leading-none;
@@ -252,12 +278,13 @@
     }
 
     & blockquote {
-      @apply .bg-gray-200 .px-8 .py-6 .my-16 .text-xl;
+      @apply .bg-gray-200 .p-5 .my-12;
 
       @screen md {
         margin-left: -10%;
         margin-right: -10%;
         width: 120%;
+        @apply .bg-gray-200 .px-8 .py-6 .my-16 .text-xl;
       }
 
       & a {
