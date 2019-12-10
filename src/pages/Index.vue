@@ -42,7 +42,7 @@
 
     <g-link
       class="inline-block mt-5"
-      to="/posts/archive/"
+      to="/archive/"
     >
       Older posts &rarr;
     </g-link>
@@ -53,7 +53,7 @@
 <script>
 export default {
   metaInfo: {
-    title: 'Main page'
+    title: 'Home'
   }
 }
 </script>

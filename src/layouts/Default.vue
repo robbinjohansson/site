@@ -4,8 +4,9 @@
       <g-link to="/" class="font-extrabold leading-none shadow-none hover:bg-transparent">{{ $static.metadata.siteName }}</g-link>
 
       <nav class="nav">
-        <g-link to="/">Home</g-link>
+        <g-link to="/">Posts</g-link>
         <g-link to="/about/">About</g-link>
+        <g-link to="/archive/">Archive</g-link>
         <a
           href="https://github.com/robbinworks"
           target="_blank"
@@ -223,16 +224,26 @@
   .nav {
     @apply .ml-auto;
 
-    & a {
-      @apply .text-sm .text-gray-600 .font-normal .shadow-none .font-medium;
+    &[aria-label="Pagination Navigation"] {
+      & a {
+        @apply .mx-1;
+      }
+    }
 
-      &:not(:last-child) {
-        @apply .mr-5;
+    &:not([aria-label="Pagination Navigation"]) {
+      & a {
+        &:not(:last-child) {
+          @apply .mr-5;
 
-        @screen md {
-          @apply .mr-6;
+          @screen md {
+            @apply .mr-6;
+          }
         }
       }
+    }
+
+    & a {
+      @apply .text-sm .text-gray-600 .font-normal .shadow-none .font-medium;
 
       &:hover, &.active--exact.active {
         @apply .bg-transparent .text-black;
