@@ -6,7 +6,7 @@
       <nav class="nav">
         <g-link to="/">Posts</g-link>
         <g-link to="/about/">About</g-link>
-        <!-- <g-link to="/archive/">Archive</g-link> -->
+        <g-link to="/archive/">Archive</g-link>
         <a
           href="https://github.com/robbinworks"
           target="_blank"
@@ -289,20 +289,20 @@
 
       @screen md {
         @apply .max-w-none;
-        margin-left: -10%;
-        margin-right: -10%;
-        width: 120%;
+        margin-left: -5%;
+        margin-right: -5%;
+        width: 110%;
       }
     }
 
     & blockquote {
-      @apply .bg-gray-200 .p-5 .my-12;
+      @apply .bg-gray-200 .p-5 .my-8;
 
       @screen md {
-        margin-left: -10%;
-        margin-right: -10%;
-        width: 120%;
-        @apply .bg-gray-200 .px-8 .py-6 .text-xl;
+        margin-left: -5%;
+        margin-right: -5%;
+        width: 110%;
+        @apply .bg-gray-200 .px-8 .py-6 .my-12 .text-xl;
       }
 
       & a {

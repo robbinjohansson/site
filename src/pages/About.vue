@@ -2,7 +2,7 @@
   <div>
     <div class="markdown">
       <h1>About</h1>
-      <p>I'm a web developer from Sweden who enjoys developing great web applications, explore new technologies, contribute to open source projects and to spend time with my family. 👪</p>
+      <p>I'm a web developer from Sweden who enjoys developing great web applications – mostly using Laravel, Vue.js and Tailwindcss.</p>
 
       <p>Occasionally I will post neat little tips and tricks related to web development, mostly as a way to keep notes for my future self. Hopefully these notes can be of value to other fellow devs as well.</p>
 
@@ -10,9 +10,9 @@
 
       <p>☝🏻 Photo taken by <a href="http://github.com/johanlinander" target="_blank" rel="nofollow noopener noreferrer">@johanlinander.</a> It's a few years old but it was the best I could find, it was either that or a random image of a cat.</p>
 
-      <p>Full source code of this website is open source and available over at <a href="https://github.com/robbinworks/site" target="_blank" rel="nofollow noopener noreferrer">GitHub.</a></p>
+      <p>This website is built with Vue.js / Gridsome, Tailwindcss and Purgecss. Deployed with ease using Netlify. Full source code is open source and available over at <a href="https://github.com/robbinworks/site" target="_blank" rel="nofollow noopener noreferrer">GitHub.</a></p>
 
-      <p><a href="https://twitter.com/robbinworks" target="_blank" rel="nofollow noopener noreferrer">I'm on twitter</a>, however – I rarely tweet so I wouldn't recommend a follow. Also, feel free to email me at <a href="mailto:mail@robbin.works">mail@robbin.works.</a></p>
+      <p>If you'd like to contact me, feel free to message me at <a href="mailto:mail@robbin.works">mail@robbin.works</a> or <a href="https://twitter.com/robbinworks" target="_blank" rel="nofollow noopener noreferrer">Twitter.</a></p>
 
     </div>
 

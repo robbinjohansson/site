@@ -3,7 +3,7 @@
     <div
       v-for="edge in $page.posts.edges"
       :key="edge.node.id"
-      class="border-b mb-16 pb-16"
+      class="border-b pb-12 mb-12 md:pb-16 md:mb-16"
     >
 
       <h2>
@@ -40,12 +40,12 @@
 
     </div>
 
-    <!-- <g-link
+    <g-link
       class="inline-block mt-5"
       to="/archive/"
     >
       Older posts &rarr;
-    </g-link> -->
+    </g-link>
 
   </div>
 </template>
