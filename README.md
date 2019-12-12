@@ -1,14 +1,16 @@
-# Default starter for Gridsome
+# Personal website
 
-This is the project you get when you run `gridsome create new-project`.
+[https://robbin.works/](https://robbin.works/)
 
-### 1. Install Gridsome CLI tool if you don't have
+## Tech stack
+ 
+- [Gridsome](https://gridsome.org/) 0.7
+- [Vuejs](https://vuejs.org/) 2.6
+- [Tailwindcss](https://tailwindcss.com/docs/what-is-tailwind/) 1.1
+- Unused CSS is purged using [`PurgeCSS`](https://github.com/FullHuman/purgecss)
+- Content stored in markdown with frontmatter using [`@gridsome/source-filesystem`](https://gridsome.org/plugins/@gridsome/source-filesystem)
+- Live site hosted on [Netlify](https://www.netlify.com/)
 
-`npm install --global @gridsome/cli`
+## License
 
-### 2. Create a Gridsome project
-
-1. `gridsome create my-gridsome-site` to install default starter
-2. `cd my-gridsome-site` to open the folder
-3. `gridsome develop` to start a local dev server at `http://localhost:8080`
-4. Happy coding 🎉🙌
+The MIT License (MIT). Please see [License File](LICENSE.md) for more information.
