@@ -1,7 +1,7 @@
 <template>
   <div>
     <header class="bg-white border-b h-16 flex items-center px-4 md:px-10">
-      <g-link to="/" class="text-sm sm:text-base md:text-lg font-bold md:font-extrabold leading-none shadow-none hover:bg-transparent">{{ $static.metadata.siteName }}</g-link>
+      <g-link to="/" class="text-base md:text-lg font-bold md:font-extrabold leading-none shadow-none hover:bg-transparent">{{ $static.metadata.siteName }}</g-link>
 
       <nav class="nav">
         <g-link to="/">Posts</g-link>
@@ -243,12 +243,7 @@
     }
 
     & a {
-      @apply .text-xs .text-gray-600 .shadow-none .font-medium;
-
-      @screen sm {
-        @apply .text-sm;
-      }
-
+      @apply .text-sm .text-gray-600 .shadow-none .font-medium;
 
       &:hover, &.active--exact.active {
         @apply .bg-transparent .text-black;
