@@ -1,7 +1,7 @@
 <template>
   <div>
-    <header class="bg-white border-b h-16 flex items-center px-5 md:px-10">
-      <g-link to="/" class="font-extrabold leading-none shadow-none hover:bg-transparent">{{ $static.metadata.siteName }}</g-link>
+    <header class="bg-white border-b h-16 flex items-center px-4 md:px-10">
+      <g-link to="/" class="text-sm sm:text-base md:text-lg font-bold md:font-extrabold leading-none shadow-none hover:bg-transparent">{{ $static.metadata.siteName }}</g-link>
 
       <nav class="nav">
         <g-link to="/">Posts</g-link>
@@ -18,7 +18,7 @@
     </header>
 
     <div class="container">
-      <div class="w-full md:w-1/2 mx-auto pt-10 pb-32 md:pt-16 md:pb-56">
+      <div class="w-full md:w-1/2 mx-auto pt-10 pb-20 md:pt-16 md:pb-56">
         <slot/>
       </div>
     </div>
@@ -233,7 +233,7 @@
     &:not([aria-label="Pagination Navigation"]) {
       & a {
         &:not(:last-child) {
-          @apply .mr-5;
+          @apply .mr-3;
 
           @screen md {
             @apply .mr-6;
@@ -243,7 +243,12 @@
     }
 
     & a {
-      @apply .text-sm .text-gray-600 .font-normal .shadow-none .font-medium;
+      @apply .text-xs .text-gray-600 .shadow-none .font-medium;
+
+      @screen sm {
+        @apply .text-sm;
+      }
+
 
       &:hover, &.active--exact.active {
         @apply .bg-transparent .text-black;
@@ -323,7 +328,11 @@
     }
 
     & hr {
-      @apply .w-full .h-px .my-16;
+      @apply .w-full .h-px .my-12;
+
+      @screen md {
+        @apply .my-16;
+      }
     }
   }
 </style>

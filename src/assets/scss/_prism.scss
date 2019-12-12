@@ -12,14 +12,14 @@ https://prismjs.com/download.html#themes=prism-okaidia&languages=markup+css+clik
  * Custom inline code
  */
 :not(pre) > code {
-    @apply font-mono text-gray-800 font-bold bg-gray-200 text-xl;
+    @apply .font-mono .text-gray-800 .font-bold .bg-gray-200 .text-xl;
     padding: .1em;
     white-space: normal;
 }
 
 code[class*="language-"],
 pre[class*="language-"] {
-    @apply font-mono text-gray-100 font-bold text-xl shadow-xl;
+    @apply .font-mono .text-gray-100 .font-bold .shadow-xl;
     background: none;
     text-shadow: 0 1px rgba(0, 0, 0, 0.3);
     text-align: left;
@@ -37,17 +37,24 @@ pre[class*="language-"] {
     -moz-hyphens: none;
     -ms-hyphens: none;
     hyphens: none;
+
+    @screen md {
+      @apply .text-xl;
+    }
 }
 
 /* Code blocks */
 pre[class*="language-"] {
-    padding: 1.5rem 2rem;
-    overflow: auto;
+    @apply .py-4 .px-6 .overflow-auto;
+
+    @screen md {
+      @apply .py-6 .px-8;
+    }
 }
 
 :not(pre) > code[class*="language-"],
 pre[class*="language-"] {
-    @apply bg-gray-900;
+    @apply .bg-gray-900;
 }
 
 /* Inline code */
@@ -90,7 +97,7 @@ pre[class*="language-"] {
 .token.char,
 .token.builtin,
 .token.inserted {
-    @apply text-green-400;
+    @apply .text-green-400;
 }
 
 .token.operator,
@@ -106,7 +113,7 @@ pre[class*="language-"] {
 .token.attr-value,
 .token.function,
 .token.class-name {
-    @apply text-yellow-300;
+    @apply .text-yellow-300;
 }
 
 .token.keyword {
