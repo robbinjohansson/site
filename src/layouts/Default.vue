@@ -310,8 +310,16 @@
       }
     }
 
+    & ul, ol {
+      @apply .list-inside .mb-10;
+    }
+
     & ul {
-      @apply .list-disc .list-inside .mb-10;
+      @apply .list-disc;
+    }
+
+    & ol {
+      @apply .list-decimal;
     }
 
     & hr {
