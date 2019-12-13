@@ -1,6 +1,6 @@
 <template>
   <div>
-    <h1 class="mb-5">Archive</h1>
+    <h1 class="mb-3">Archive</h1>
 
     <div :class="{'border-b mb-5 pb-10': $page.posts.pageInfo.totalPages > 1}">
       <div

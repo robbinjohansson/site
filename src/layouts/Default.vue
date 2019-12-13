@@ -200,7 +200,11 @@
   }
 
   h1,h2,h3,h4,h5,h6 {
-    @apply .font-extrabold .tracking-tight .text-black;
+    @apply .font-extrabold .tracking-tight .text-black .leading-tight .mb-2;
+
+    @screen md {
+      @apply .leading-relaxed .mb-1;
+    }
 
     a {
       font-weight: inherit;
@@ -263,8 +267,6 @@
 
   .markdown {
     & h1, & h2, & h3, & h4, & h5, & h6 {
-      @apply .mb-1;
-
       &:not(:first-child) {
         @apply .mt-12;
       }
@@ -302,7 +304,11 @@
         margin-left: -5%;
         margin-right: -5%;
         width: 110%;
-        @apply .bg-gray-200 .px-8 .py-6 .my-12 .text-xl;
+        @apply .px-8 .py-6 .my-12 .text-xl;
+      }
+
+      & code {
+        @apply .bg-gray-100;
       }
 
       & a {
@@ -311,7 +317,7 @@
     }
 
     & ul, ol {
-      @apply .list-inside .mb-10;
+      @apply .pl-4.4 .mb-10;
     }
 
     & ul {

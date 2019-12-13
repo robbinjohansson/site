@@ -1,6 +1,9 @@
 module.exports = {
   theme: {
     extend: {
+      spacing: {
+        '4.4': '1.1rem',
+      },
       maxWidth: {
         'none': 'none',
       },

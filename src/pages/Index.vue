@@ -10,7 +10,7 @@
         <g-link :to="edge.node.path">{{ edge.node.title }}</g-link>
       </h2>
 
-      <div class="text-sm text-gray-600 mt-1 mb-6">
+      <div class="text-sm text-gray-600 mb-6">
         <span>{{ edge.node.date }} | {{ edge.node.timeToRead }} min read</span>
       </div>
 

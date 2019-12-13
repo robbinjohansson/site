@@ -1,6 +1,6 @@
 <template>
   <div>
-    <h1 class="mb-5">Tag: #{{ $page.tag.title }}</h1>
+    <h1 class="mb-3">Tag: #{{ $page.tag.title }}</h1>
 
     <div :class="{'border-b mb-5 pb-10': $page.tag.belongsTo.pageInfo.totalPages > 1}">
       <div
