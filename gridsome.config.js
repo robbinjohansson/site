@@ -1,11 +1,12 @@
 const purgecss = require('@fullhuman/postcss-purgecss');
 const tailwind = require('tailwindcss');
+const isProduction = process.env.NODE_ENV === 'production';
 
 const postcssPlugins = [
   tailwind('./tailwind.config.js'),
 ]
 
-if (process.env.NODE_ENV === 'production') postcssPlugins.push(purgecss());
+if (isProduction) postcssPlugins.push(purgecss());
 
 module.exports = {
   siteName: 'robbin.works',
@@ -36,7 +37,10 @@ module.exports = {
     {
     use: '@gridsome/plugin-google-analytics',
       options: {
-        id: 'UA-134187327-1'
+        id: process.env.GA_TRACKING_CODE,
+        debug: {
+          sendHitTask: isProduction
+        }
       }
     }
   ],
