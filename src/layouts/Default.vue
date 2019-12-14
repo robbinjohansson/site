@@ -342,6 +342,8 @@
 query {
   metadata {
     siteName
+    siteDescription
+    siteUrl
   }
 }
 </static-query>
