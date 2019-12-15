@@ -287,10 +287,10 @@
     }
 
     & img, & pre {
-      @apply .my-12;
+      @apply .my-10;
 
       @screen md {
-        @apply .max-w-none;
+        @apply .max-w-none .my-12;
         margin-left: -5%;
         margin-right: -5%;
         width: 110%;
@@ -298,13 +298,17 @@
     }
 
     & blockquote {
-      @apply .bg-gray-200 .p-5 .my-8;
+      @apply .bg-gray-200 .p-6 .my-10;
 
       @screen md {
         margin-left: -5%;
         margin-right: -5%;
         width: 110%;
-        @apply .px-8 .py-6 .my-12 .text-xl;
+        @apply .p-8 .my-12 .text-xl;
+
+        code {
+          @apply .text-xl;
+        }
       }
 
       & code {
