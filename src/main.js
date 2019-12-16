@@ -1,5 +1,5 @@
-import './assets/scss/app.scss';
-import './assets/scss/_prism.scss';
+import './assets/css/app.css';
+import './assets/css/_prism.css';
 
 export default function (Vue, { router, head, isClient }) {
   head.htmlAttrs = { lang: 'en', class: 'bg-white antialiased' }

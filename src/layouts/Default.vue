@@ -25,7 +25,7 @@
   </div>
 </template>
 
-<style lang="scss">
+<style>
   @font-face {
     font-family: 'Inconsolata';
     font-style:  normal;
@@ -200,13 +200,13 @@
   }
 
   h1,h2,h3,h4,h5,h6 {
-    @apply .font-extrabold .tracking-tight .text-black .leading-tight .mb-2;
+    @apply font-extrabold tracking-tight text-black leading-tight mb-2;
 
     @screen md {
-      @apply .leading-relaxed .mb-1;
+      @apply leading-relaxed mb-1;
     }
 
-    a {
+    & a {
       font-weight: inherit;
       color: inherit;
       line-height: inherit;
@@ -218,49 +218,49 @@
       }
     }
   }
-  h1 { @apply .text-4xl; }
-  h2 { @apply .text-3xl; }
-  h3 { @apply .text-2xl; }
-  h4 { @apply .text-xl; }
-  h5 { @apply .text-lg; }
-  h6 { @apply .text-base; }
+  h1 { @apply text-4xl; }
+  h2 { @apply text-3xl; }
+  h3 { @apply text-2xl; }
+  h4 { @apply text-xl; }
+  h5 { @apply text-lg; }
+  h6 { @apply text-base; }
 
   .nav {
-    @apply .ml-auto;
+    @apply ml-auto;
 
     &[aria-label="Pagination Navigation"] {
       & a {
-        @apply .mx-1;
+        @apply mx-1;
       }
     }
 
     &:not([aria-label="Pagination Navigation"]) {
       & a {
         &:not(:last-child) {
-          @apply .mr-3;
+          @apply mr-3;
 
           @screen md {
-            @apply .mr-6;
+            @apply mr-6;
           }
         }
       }
     }
 
     & a {
-      @apply .text-sm .text-gray-600 .shadow-none .font-medium;
+      @apply text-sm text-gray-600 shadow-none font-medium;
 
       &:hover, &.active--exact.active {
-        @apply .bg-transparent .text-black;
+        @apply bg-transparent text-black;
       }
     }
   }
 
   a {
-    @apply .text-black .font-bold .shadow-link .leading-none;
+    @apply text-black font-bold shadow-link leading-none;
     transition: background-color 100ms ease-in, box-shadow 100ms ease-in;
 
     &:hover {
-      @apply .no-underline .shadow-none;
+      @apply no-underline shadow-none;
       background-color: rgba(0, 179, 154, 0.4);
     }
   }
@@ -268,17 +268,17 @@
   .markdown {
     & h1, & h2, & h3, & h4, & h5, & h6 {
       &:not(:first-child) {
-        @apply .mt-12;
+        @apply mt-12;
       }
     }
 
     & p {
       &:not(:last-child) {
-        @apply .mb-10;
+        @apply mb-10;
       }
 
       &.caption {
-        @apply .-mt-6 .text-sm .italic;
+        @apply -mt-6 text-sm italic;
 
         & code {
           font-size: inherit;
@@ -287,10 +287,10 @@
     }
 
     & img, & pre {
-      @apply .my-10;
+      @apply my-10;
 
       @screen md {
-        @apply .max-w-none .my-12;
+        @apply max-w-none my-12;
         margin-left: -5%;
         margin-right: -5%;
         width: 110%;
@@ -298,45 +298,45 @@
     }
 
     & blockquote {
-      @apply .bg-gray-200 .p-6 .my-10;
+      @apply bg-gray-200 p-6 my-10;
 
       @screen md {
         margin-left: -5%;
         margin-right: -5%;
         width: 110%;
-        @apply .p-8 .my-12 .text-xl;
+        @apply p-8 my-12 text-xl;
 
-        code {
-          @apply .text-xl;
+        & code {
+          @apply text-xl;
         }
       }
 
       & code {
-        @apply .bg-gray-100;
+        @apply bg-gray-100;
       }
 
       & a {
-        @apply .text-2xl .text-gray-800;
+        @apply text-2xl text-gray-800;
       }
     }
 
-    & ul, ol {
-      @apply .pl-4.4 .mb-10;
+    & ul, & ol {
+      @apply pl-4.4 mb-10;
     }
 
     & ul {
-      @apply .list-disc;
+      @apply list-disc;
     }
 
     & ol {
-      @apply .list-decimal;
+      @apply list-decimal;
     }
 
     & hr {
-      @apply .w-full .h-px .my-12;
+      @apply w-full h-px my-12;
 
       @screen md {
-        @apply .my-16;
+        @apply my-16;
       }
     }
   }

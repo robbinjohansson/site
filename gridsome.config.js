@@ -4,6 +4,7 @@ const isProduction = process.env.NODE_ENV === 'production';
 
 const postcssPlugins = [
   tailwind('./tailwind.config.js'),
+  require('postcss-nesting'),
 ]
 
 if (isProduction) postcssPlugins.push(purgecss());
