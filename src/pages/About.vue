@@ -2,9 +2,9 @@
   <div>
     <div class="markdown">
       <h1>About</h1>
-      <p>I'm a web developer from Sweden who enjoys developing great web applications – mostly using Laravel, Vue.js and Tailwindcss.</p>
+      <p>I'm a web developer from Sweden who enjoys developing great web applications – my go-to tech stack currently is Laravel, Vue.js and Tailwindcss.</p>
 
-      <p>Occasionally I will post neat little tips and tricks related to web development, mostly as a way to keep notes for my future self. Hopefully these notes can be of value to other fellow devs as well.</p>
+      <p>Occasionally I will share neat tips and tricks related to my day-to-day work, mostly as a way to keep notes for my future self. Hopefully these notes can be of value to other fellow devs as well.</p>
 
       <g-image src="~/assets/images/about1200x630@2x.jpg" alt="Robbin Johansson" />
 
