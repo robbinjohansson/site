@@ -44,7 +44,7 @@
       class="inline-block mt-5"
       to="/archive/"
     >
-      Older posts &rarr;
+      All posts &rarr;
     </g-link>
 
   </div>
