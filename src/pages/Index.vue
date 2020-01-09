@@ -7,18 +7,43 @@
     >
 
       <h2>
-        <g-link :to="edge.node.path">{{ edge.node.title }}</g-link>
+        <a
+          v-if="edge.node.sharable_url"
+          :href="edge.node.sharable_url"
+          target="_blank"
+          rel="nofollow noopener noreferrer"
+        >
+          {{ edge.node.title }}
+        </a>
+
+        <g-link
+          v-else
+          :to="edge.node.path"
+        >
+          {{ edge.node.title }}
+        </g-link>
       </h2>
 
       <div class="text-sm text-gray-600 mb-6">
-        <span>{{ edge.node.date }} | {{ edge.node.timeToRead }} min read</span>
+        <span>{{ edge.node.date }} // <span v-if="edge.node.sharable_domain" v-html="`[${edge.node.sharable_domain}]`"></span><span v-else>{{ edge.node.timeToRead }} min read</span></span>
       </div>
 
       <div v-html="edge.node.intro"></div>
 
-      <g-link
+      <a
+        v-if="edge.node.sharable_url"
+        :href="edge.node.sharable_url"
+        target="_blank"
+        rel="nofollow noopener noreferrer"
         class="inline-block mt-5"
+      >
+          Read more &rarr;
+      </a>
+
+      <g-link
+        v-else
         :to="edge.node.path"
+        class="inline-block mt-5"
       >
         Read more &rarr;
       </g-link>
@@ -64,6 +89,8 @@ export default {
       edges {
         node {
           id
+          sharable_url
+          sharable_domain
           title
           date (format: "DD MMM, YYYY")
           timeToRead

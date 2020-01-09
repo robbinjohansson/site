@@ -6,10 +6,28 @@
       <div
         v-for="edge in $page.posts.edges"
         :key="edge.node.id"
-        class="mb-3"
+        class="mb-6 flex flex-col items-start"
       >
 
-        <g-link :to="edge.node.path">{{ edge.node.title }}</g-link><span class="text-sm text-gray-600 ml-2">{{ edge.node.date }}</span>
+        <span class="text-sm text-gray-600 mb-2">
+          <span>{{ edge.node.date }} // <span v-if="edge.node.sharable_domain" v-html="`[${edge.node.sharable_domain}]`"></span><span v-else>{{ edge.node.timeToRead }} min read</span></span>
+        </span>
+
+        <a
+          v-if="edge.node.sharable_url"
+          :href="edge.node.sharable_url"
+          target="_blank"
+          rel="nofollow noopener noreferrer"
+        >
+          {{ edge.node.title }}
+        </a>
+
+        <g-link
+          v-else
+          :to="edge.node.path"
+        >
+          {{ edge.node.title }}
+        </g-link>
 
       </div>
     </div>
@@ -43,6 +61,8 @@ export default {
       edges {
         node {
           id
+          sharable_url
+          sharable_domain
           title
           date (format: "DD MMM, YYYY")
           timeToRead

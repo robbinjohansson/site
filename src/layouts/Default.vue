@@ -4,7 +4,7 @@
       <g-link to="/" class="text-base md:text-lg font-bold md:font-extrabold leading-none shadow-none hover:bg-transparent">{{ $static.metadata.siteName }}</g-link>
 
       <nav class="nav">
-        <g-link to="/">Posts</g-link>
+        <g-link to="/">Feed</g-link>
         <g-link to="/about/">About</g-link>
         <g-link to="/archive/">Archive</g-link>
         <a

@@ -8,7 +8,7 @@
       </g-link> -->
 
       <div class="text-sm text-gray-600 mt-1 mb-6">
-        <span>{{ $page.post.date }} | {{ $page.post.timeToRead }} min read</span>
+        <span>{{ $page.post.date }} // {{ $page.post.timeToRead }} min read</span>
       </div>
 
       <div class="markdown pb-12 mb-12 md:pb-16 md:mb-16 border-b">
