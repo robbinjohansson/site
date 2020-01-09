@@ -78,7 +78,7 @@
 <script>
 export default {
   metaInfo: {
-    title: 'Posts'
+    title: 'Feed'
   }
 }
 </script>
