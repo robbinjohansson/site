@@ -16,7 +16,7 @@
 
         <div v-html="$page.post.content"></div>
 
-        <span>👨🏻‍💻</span><p class="inline-block mt-12 italic text-base">~ Robbin</p>
+        <span>👨🏻‍💻</span><p class="inline-block mt-12 italic text-base">~ {{ $page.metadata.author.name }}</p>
       </div>
 
       <g-link
@@ -54,6 +54,11 @@ export default {
 
 <page-query>
 query Post ($id: ID!) {
+  metadata {
+    author {
+      name
+    }
+  }
   post: post (id: $id) {
     title
     path

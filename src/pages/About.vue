@@ -12,11 +12,11 @@
 
       <p>This website is built with Vue.js / Gridsome, Tailwindcss and Purgecss. Deployed with ease using Netlify. Full source code is open source and available over at <a href="https://github.com/robbinworks/site" target="_blank" rel="nofollow noopener noreferrer">GitHub.</a></p>
 
-      <p>If you'd like to contact me, feel free to message me at <a href="mailto:mail@robbin.works">mail@robbin.works</a> or <a href="https://twitter.com/robbinworks" target="_blank" rel="nofollow noopener noreferrer">Twitter.</a></p>
+      <p>If you'd like to contact me, feel free to message me at <a :href="`mailto:${$page.metadata.author.email}`">{{ $page.metadata.author.email }}</a> or <a :href="$page.metadata.author.twitter" target="_blank" rel="nofollow noopener noreferrer">Twitter.</a></p>
 
     </div>
 
-    <span>👨🏻‍💻</span><p class="inline-block mt-12 italic text-base">~ Robbin</p>
+    <span>👨🏻‍💻</span><p class="inline-block mt-12 italic text-base">~ {{ $page.metadata.author.name }}</p>
   </div>
 </template>
 
@@ -27,3 +27,15 @@ export default {
   }
 }
 </script>
+
+<page-query>
+  query {
+    metadata {
+      author {
+        name
+        email
+        twitter
+      }
+    }
+}
+</page-query>

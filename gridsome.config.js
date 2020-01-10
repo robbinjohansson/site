@@ -11,12 +11,21 @@ if (isProduction) postcssPlugins.push(purgecss());
 
 module.exports = {
   siteName: 'robbin.works',
-  siteDescription: 'My name is Robbin, I enjoy building great web apps.',
+  siteDescription: 'Maker of things',
   siteUrl: 'https://robbin.works/',
 
   templates: {
     Post: '/:title',
     Tag: '/tag/:title'
+  },
+
+  metadata: {
+    author: {
+      name: 'Robbin',
+      email: 'mail@robbin.works',
+      github: 'https://github.com/robbinworks/',
+      twitter: 'https://twitter.com/robbinworks/',
+    }
   },
 
   plugins: [

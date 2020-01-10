@@ -8,7 +8,7 @@
         <g-link to="/about/">About</g-link>
         <g-link to="/archive/">Archive</g-link>
         <a
-          href="https://github.com/robbinworks"
+          :href="$static.metadata.author.github"
           target="_blank"
           rel="nofollow noopener noreferrer"
         >
@@ -348,6 +348,9 @@ query {
     siteName
     siteDescription
     siteUrl
+    author {
+      github
+    }
   }
 }
 </static-query>
