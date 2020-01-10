@@ -41,15 +41,6 @@ module.exports = {
           }
         }
       }
-    },
-    {
-    use: '@gridsome/plugin-google-analytics',
-      options: {
-        id: process.env.GA_TRACKING_CODE,
-        debug: {
-          sendHitTask: isProduction
-        }
-      }
     }
   ],
 
