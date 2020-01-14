@@ -32,7 +32,6 @@ export default {
         node {
           id
           sharable_url
-          sharable_domain
           title
           date (format: "DD MMM, YYYY")
           timeToRead

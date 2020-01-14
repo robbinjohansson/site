@@ -2,7 +2,6 @@ module.exports = function (api) {
   api.onCreateNode(options => {
     if (options.internal.typeName === 'Post') {
       options.sharable_url = options.sharable_url || "";
-      options.sharable_domain = options.sharable_domain || "";
 
       return {
         ...options
@@ -12,7 +11,7 @@ module.exports = function (api) {
 
   api.createPages(async ({ graphql, createPage }) => {
     const { data } = await graphql(`{
-      allPost (filter: { sharable_url: { eq: "" }, sharable_domain: { eq: "" } }) {
+      allPost (filter: { sharable_url: { eq: "" } }) {
         edges {
           node {
             id

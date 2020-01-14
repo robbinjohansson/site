@@ -35,7 +35,6 @@ query Tag ($id: ID!, $page: Int) {
           ...on Post {
             title
             sharable_url
-            sharable_domain
             path
             date (format: "DD MMM, YYYY")
             timeToRead

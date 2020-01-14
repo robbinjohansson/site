@@ -25,7 +25,7 @@
       </h2>
 
       <div class="text-sm text-gray-600 mb-6">
-        <span>{{ edge.node.date }} // <span v-if="edge.node.sharable_domain" v-html="`[${edge.node.sharable_domain}]`"></span><span v-else>{{ edge.node.timeToRead }} min read</span></span>
+        <span>{{ edge.node.date }} // <span v-if="edge.node.sharable_url" v-html="`[${getUrlHostname(edge.node.sharable_url)}]`"></span><span v-else>{{ edge.node.timeToRead }} min read</span></span>
       </div>
 
       <div v-html="edge.node.intro"></div>
@@ -90,7 +90,6 @@ export default {
         node {
           id
           sharable_url
-          sharable_domain
           title
           date (format: "DD MMM, YYYY")
           timeToRead
